@@ -1,0 +1,9 @@
+services:
+  semiconductor-pipeline:
+    build: . # Build the image from the Dockerfile in this folder
+    ports:
+      - "8501:8501" # Maps local port 8501 → container's port 8501
+        # Format is "your_machine:container"
+    volumes:
+      - ./data:/app/data # Keeps the SQLite database file outside the container
+        # So data persists even if the container is stopped
