@@ -59,6 +59,15 @@ filtered = df[
 
 #Debug: Check if tickers are loaded: st.sidebar.write(f"Selected: {selected_tickers}")
 
+#------Bug Fix: Insert guard for error message in Streamlit when no ticker selected
+if filtered.empty or len(selected_tickers) == 0:
+    st.warning("Alert: No selected ticker for display in sidebar.")
+    st.stop()  # Stops the script here — nothing below this line renders
+
+
+
+
+
 #-----KPI CARDS - Latest closing prices----------------
 st.subheader("Latest Close Prices")
 
