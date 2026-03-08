@@ -13,6 +13,7 @@ it through an interactive Streamlit dashboard.
 | Analog Devices    | ADI    |
 | Qualcomm          | QCOM   |
 | Intel             | INTC   |
+| TSMC              | TSM    |
 
 ## Architecture
 
